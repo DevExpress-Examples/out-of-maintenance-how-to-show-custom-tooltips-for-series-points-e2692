@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="ToolTipsExample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <!-- #region A sample chart. -->
+        <dxc:ChartControl x:Name="chart" MouseMove="chart_MouseMove" MouseLeave="chart_MouseLeave">
+            <dxc:ChartControl.Diagram>
+                <dxc:XYDiagram2D>
+                    <dxc:XYDiagram2D.Series>
+                        <dxc:BarSideBySideSeries2D x:Name="Series1998" DisplayName="1998">
+                            <dxc:BarSideBySideSeries2D.Model>
+                                <dxc:FlatGlassBar2DModel />
+                            </dxc:BarSideBySideSeries2D.Model>
+                            <dxc:BarSideBySideSeries2D.Label>
+                                <dxc:SeriesLabel Indent="20" ResolveOverlappingMode="Default" ConnectorThickness="1" />
+                            </dxc:BarSideBySideSeries2D.Label>
+                            <dxc:BarSideBySideSeries2D.Points>
+                                <dxc:SeriesPoint Argument="Illinois" Value="423.721" />
+                                <dxc:SeriesPoint Argument="Indiana" Value="178.719" />
+                                <dxc:SeriesPoint Argument="Michigan" Value="308.845" />
+                                <dxc:SeriesPoint Argument="Ohio" Value="348.555" />
+                                <dxc:SeriesPoint Argument="Wisconsin" Value="160.274" />
+                            </dxc:BarSideBySideSeries2D.Points>
+                        </dxc:BarSideBySideSeries2D>
+                        <dxc:BarSideBySideSeries2D x:Name="Series2001" DisplayName="2001">
+                            <dxc:BarSideBySideSeries2D.Model>
+                                <dxc:FlatGlassBar2DModel />
+                            </dxc:BarSideBySideSeries2D.Model>
+                            <dxc:BarSideBySideSeries2D.Label>
+                                <dxc:SeriesLabel Indent="20" ResolveOverlappingMode="Default" ConnectorThickness="1" />
+                            </dxc:BarSideBySideSeries2D.Label>
+                            <dxc:BarSideBySideSeries2D.Points>
+                                <dxc:SeriesPoint Argument="Illinois" Value="476.851" />
+                                <dxc:SeriesPoint Argument="Indiana" Value="195.769" />
+                                <dxc:SeriesPoint Argument="Michigan" Value="335.793" />
+                                <dxc:SeriesPoint Argument="Ohio" Value="374.771" />
+                                <dxc:SeriesPoint Argument="Wisconsin" Value="182.373" />
+                            </dxc:BarSideBySideSeries2D.Points>
+                        </dxc:BarSideBySideSeries2D>
+                        <dxc:BarSideBySideSeries2D x:Name="Series2004" DisplayName="2004">
+                            <dxc:BarSideBySideSeries2D.Model>
+                                <dxc:FlatGlassBar2DModel />
+                            </dxc:BarSideBySideSeries2D.Model>
+                            <dxc:BarSideBySideSeries2D.Label>
+                                <dxc:SeriesLabel Indent="20" ResolveOverlappingMode="Default" ConnectorThickness="1" />
+                            </dxc:BarSideBySideSeries2D.Label>
+                            <dxc:BarSideBySideSeries2D.Points>
+                                <dxc:SeriesPoint Argument="Illinois" Value="528.904" />
+                                <dxc:SeriesPoint Argument="Indiana" Value="227.271" />
+                                <dxc:SeriesPoint Argument="Michigan" Value="372.576" />
+                                <dxc:SeriesPoint Argument="Ohio" Value="418.258" />
+                                <dxc:SeriesPoint Argument="Wisconsin" Value="211.727" />
+                            </dxc:BarSideBySideSeries2D.Points>
+                        </dxc:BarSideBySideSeries2D>
+                    </dxc:XYDiagram2D.Series>
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl.Diagram>
+            <dxc:ChartControl.Legend>
+                <dxc:Legend HorizontalPosition="Center" VerticalPosition="BottomOutside" Orientation="Horizontal" />
+            </dxc:ChartControl.Legend>
+        </dxc:ChartControl>
+        <Popup Name="pointTooltip">
+            <TextBox x:Name="ttContent" IsReadOnly="True" />
+        </Popup>
+        <!-- #endregion A sample chart. -->
+    </Grid>
+</UserControl>
