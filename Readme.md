@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [MainPage.xaml](./CS/ToolTipsExample/MainPage.xaml) (VB: [MainPage.xaml](./VB/ToolTipsExample/MainPage.xaml))
-* [MainPage.xaml.cs](./CS/ToolTipsExample/MainPage.xaml.cs) (VB: [MainPage.xaml](./VB/ToolTipsExample/MainPage.xaml))
+* [MainPage.xaml.cs](./CS/ToolTipsExample/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/ToolTipsExample/MainPage.xaml.vb))
 <!-- default file list end -->
 # How to show custom tooltips for series points
 
